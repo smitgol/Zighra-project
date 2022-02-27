@@ -1,0 +1,104 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<title>SensifyID Javascript SDK - Sample App</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	<script src="js/vendor/jquery-1.11.2.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/helper.js"></script>
+</head>
+
+<body id="body">
+	<span style="display:none;" id="pointer"></span>
+	<nav class="navbar" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">SensifyID Javascript SDK - Sample App</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<ul class="nav nav-pills">
+							<li>
+								<input type="button" class="btn btn-warning" value="Track Again" onclick="window.location.href='index.html';">
+							</li>
+							<li class="pull-right">
+								<button id="clearData" class="btn btn-danger" onclick="clearData();"></button>
+								<li id="storagesize"></li>
+						</ul>
+					</div>
+					<div class="panel-body" style="min-height:500px!important;">
+
+						<ul class="nav nav-tabs">
+							<li class="active">
+								<a data-toggle="tab" href="#dataview">Tracking Data</a>
+							</li>
+							<li>
+								<a data-toggle="tab" href="#browserdataview">Device Data</a>
+							</li>
+							<li>
+								<a data-toggle="tab" href="#mousedisplay">Mouse Data</a>
+							</li>
+							<li>
+								<a data-toggle="tab" href="#browserrawdata">Device Data (RAW)</a>
+							</li>
+							<li>
+								<a data-toggle="tab" href="#rawdata">Tracking Data (RAW)</a>
+							</li>
+						</ul>
+
+						<div class="tab-content">
+							<div id="dataview" class="tab-pane active">
+							</div>
+							<div id="browserdataview" class="tab-pane">
+							</div>
+							<div id="mousedisplay" class="tab-pane">
+								<canvas id="canvas" width="1024" height="500">
+									This text is displayed if your browser does not support HTML5 Canvas.
+								</canvas>
+								<p>
+									<strong>Notes</strong>
+									<ul>
+										<li>Line represents the path of mouse.</li>
+										<li>Dot represent mouse click.</li>
+										<li>Radius of mouse click is time difference between mouse down and up.</li>
+									</ul>
+									<i>Actions on elements outside tracking area will not be displayed here.</i>
+								</p>
+							</div>
+							<div id="browserrawdata" class="tab-pane">
+								
+									<pre><code>No data</code></pre>
+								
+							</div>
+							<div id="rawdata" class="tab-pane">
+								
+									<pre><code>No data</code></pre>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<span>SensifyID JS SDK v1.0.1</span>
+			<span class="pull-right">&copy; Zighra, Inc.</span>
+		</footer>
+	</div>
+	<script src="js/result.js"></script>
+</body>
+
+</html>
